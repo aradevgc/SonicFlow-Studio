@@ -1,0 +1,8 @@
+# SonicFlow Studio — dependencias (todas gratuitas/open source)
+numpy>=1.24
+sounddevice>=0.4.6        # PortAudio: E/S de audio de baja latencia
+soundfile>=0.12           # lectura/escritura WAV/FLAC/OGG (libsndfile)
+scipy>=1.10               # re-muestreo polyphase de alta calidad
+PySide6>=6.5              # interfaz + QtMultimedia (reproductor de vídeo)
+mido>=1.3                 # MIDI (opcional: la app funciona sin dispositivo)
+pytest>=7                 # pruebas (solo desarrollo)
