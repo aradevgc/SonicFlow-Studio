@@ -285,6 +285,7 @@ class Reverb:
                     idx = 0
             self.apidx[ai] = idx
         m = mix
+        out = np.empty_like(dry)
         out[:, 0] = dry[:, 0] * (1 - m) + acc_l * m
         out[:, 1] = dry[:, 1] * (1 - m) + acc_r * m
         return out

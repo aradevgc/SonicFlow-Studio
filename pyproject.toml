@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sonicflow-studio"
+version = "1.0.0"
+description = "Alternativa gratuita y open source a Krotos Studio: interpretación de FX en tiempo real sobre vídeo"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "SonicFlow Project" }]
+dependencies = [
+  "numpy>=1.24",
+  "sounddevice>=0.4.6",
+  "soundfile>=0.12",
+  "scipy>=1.10",
+  "PySide6>=6.5",
+  "mido>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pyinstaller>=6"]
+
+[project.gui-scripts]
+sonicflow = "main:main"
+
+[tool.setuptools]
+packages = ["sonicflow", "sonicflow.audio", "sonicflow.video", "sonicflow.library",
+            "sonicflow.midi", "sonicflow.project", "sonicflow.ui"]
